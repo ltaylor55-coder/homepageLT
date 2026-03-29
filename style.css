@@ -1,0 +1,369 @@
+/* ===== RESET & BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ===== ABOUT SECTION ===== */
+.about-section {
+    padding: 40px 0 60px;
+    position: relative;
+}
+
+.about-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 400px;
+    background: #1e4a6b;
+    transform: skewY(-5deg);
+    transform-origin: top left;
+    z-index: -1;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.profile-box {
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.profile-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.profile-box h1 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.about-text {
+    background: white;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.about-text p {
+    color: #555;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+}
+
+.social-links a {
+    color: #333;
+    font-size: 1.8rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #1e4a6b;
+}
+
+/* ===== PROJECTS SECTION ===== */
+.projects-section {
+    padding: 40px 0 60px;
+    background: #f5f5f5;
+}
+
+.projects-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    color: #222;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    background: white;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.project-screenshot {
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* Different colors for each project */
+.project-card:nth-child(1) .project-screenshot { background: #8B1E3C; }
+.project-card:nth-child(2) .project-screenshot { background: #2A4B7C; }
+.project-card:nth-child(3) .project-screenshot { background: #2C5F2D; }
+.project-card:nth-child(4) .project-screenshot { background: #B76E3C; }
+.project-card:nth-child(5) .project-screenshot { background: #5D3B6B; }
+.project-card:nth-child(6) .project-screenshot { background: #A8433D; }
+
+.project-details {
+    padding: 20px;
+}
+
+.project-details h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: #222;
+}
+
+.project-details p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact-section {
+    background: #1e4a6b;
+    color: white;
+    padding: 50px 0;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.contact-info h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.contact-message {
+    font-size: 1rem;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+.contact-info address {
+    font-style: normal;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #e0e0e0;
+}
+
+.contact-info .phone,
+.contact-info .email {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+}
+
+.contact-info i {
+    width: 20px;
+    color: #ffb347;
+}
+
+.contact-image img {
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.contact-section .social-links {
+    margin-top: 25px;
+}
+
+.contact-section .social-links a {
+    color: white;
+}
+
+.contact-section .social-links a:hover {
+    color: #ffb347;
+}
+
+/* ===== TABLET (900px and below) ===== */
+@media screen and (max-width: 900px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .profile-box {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .profile-box h1 {
+        font-size: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        text-align: center;
+    }
+
+    .about-text {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .contact-info .phone,
+    .contact-info .email {
+        justify-content: center;
+    }
+
+    .contact-image {
+        max-width: 400px;
+        margin: 0 auto;
+        order: -1;
+    }
+}
+
+/* ===== MOBILE (600px and below) ===== */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .profile-box h1 {
+        font-size: 1.6rem;
+        bottom: 10px;
+    }
+
+    .about-text {
+        padding: 20px;
+    }
+
+    .about-text h2 {
+        font-size: 1.6rem;
+    }
+
+    .about-text p {
+        font-size: 0.95rem;
+    }
+
+    .projects-section h2 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+    .project-screenshot {
+        height: 160px;
+    }
+
+    .contact-info h2 {
+        font-size: 1.8rem;
+    }
+
+    .contact-info .phone,
+    .contact-info .email {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .social-links {
+        gap: 15px;
+    }
+
+    .social-links a {
+        font-size: 1.6rem;
+    }
+}
+
+/* ===== SMALL MOBILE (400px and below) ===== */
+@media screen and (max-width: 400px) {
+    .profile-box h1 {
+        font-size: 1.3rem;
+        bottom: 8px;
+    }
+
+    .project-details h3 {
+        font-size: 1.1rem;
+    }
+
+    .project-details p {
+        font-size: 0.85rem;
+    }
+}
